@@ -43,9 +43,9 @@ action_id=603
 applies_to=self
 */
 draw_set_halign(1)
-draw_text(95,102,text)
+draw_text(95,96,text)
 draw_set_font(fntSmall)
-draw_text(95,140,text2)
+draw_text(95,132,text2)
 draw_set_font(fntSetback)
 draw_set_halign(0)
 
@@ -68,7 +68,7 @@ draw_set_valign(0)
 surface_reset_target()
 
 for (i=0;i<160;i+=2) {
-    draw_surface_part_ext(s,i,0,2,32,16+i,56+6*sin(time/10+i/50),1,1,$ffffff,min(1,(80-abs(80-i))/32))
+    draw_surface_part_ext(s,i,0,2,32,16+i,52+6*sin(time/10+i/50),1,1,$ffffff,min(1,(80-abs(80-i))/32))
 }
 
 draw_self()

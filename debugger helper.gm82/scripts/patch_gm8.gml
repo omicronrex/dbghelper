@@ -1,6 +1,8 @@
 //apply gm8x_fix
 
-execute_silent(temp_directory+"\gm8x_fix.dll",'-s "'+argument0+'"')
+kek=""
+if (!FramePatch.checked) kek="-ni "
+execute_silent(temp_directory+"\gm8x_fix.dll",'-s '+kek+'"'+argument0+'"')
 if (file_exists(argument0+".bak")) {
     file_delete(argument0+".bak")
     if (!foldermode) show_message("GM8 patch successful!")
