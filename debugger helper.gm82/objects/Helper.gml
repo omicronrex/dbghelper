@@ -11,7 +11,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-sound_kind_volume(1,0.4)
+sound_kind_volume(1,0.3)
 sound_loop(sound_add_included("Cheese n Onion.xm",1,1))
 
 window_set_visible(1)
