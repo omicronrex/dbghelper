@@ -141,8 +141,8 @@ if (fn!="") {
     if (chr(buffer_read_u8(b))=" ")
     if (chr(buffer_read_u8(b))="7") {
         count+=1
-        if (!foldermode) show_message("This is a Game Maker 7 game and can't be patched!")
         buffer_destroy(b)
+        patch_gm8(fn)
         exit
     }
 
