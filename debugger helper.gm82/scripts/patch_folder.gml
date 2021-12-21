@@ -3,7 +3,8 @@ var list,folder,total,log,i,f,mem;
 with (Helper) {
     list=ds_list_create()
 
-    folder=filename_dir(get_save_filename("Select a folder|","folder"))
+    if (argument_count) folder=argument[0]
+    else folder=filename_dir(get_save_filename("Select a folder|","folder"))
     if (folder="") exit
 
     text="Loading..."
