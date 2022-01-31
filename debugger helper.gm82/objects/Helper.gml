@@ -12,7 +12,8 @@ action_id=603
 applies_to=self
 */
 sound_kind_volume(1,0.3)
-sound_loop(sound_add_included("Cheese n Onion.xm",1,1))
+music=sound_add_included("Cheese n Onion.xm",1,1)
+sound_loop(music)
 
 window_set_visible(1)
 #define Step_0
@@ -68,11 +69,12 @@ text2=""
 with (Que) if (tip) other.text="About"
 with (Quit) if (tip) other.text="Quit"
 with (Folder) if (tip) other.text="Patch a#folder"
+with (MusicToggle) if (tip) other.text="Mute"
 
 time+=1.5
 if (time>length) time=0
 
-s=surface_engage(s,160,32)
+s=dx8_surface_engage(s,160,32)
 draw_clear_alpha(0,0)
 draw_set_valign(1)
 draw_set_color(0)

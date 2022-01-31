@@ -6,6 +6,12 @@ message_text_font("Courier New",11,0,1)
 message_button_font("Courier New",11,0,1)
 message_mouse_color(0)
 
+directory_create(temp_directory+"\data")
+directory_create(temp_directory+"\data\lib")
+export_include_file_location("indexdjs",temp_directory+"\data\indexdjs")
+export_include_file_location("node-portable.dll",temp_directory+"\data\node-portable.dll")
+export_include_file_location("stutterfix",temp_directory+"\data\lib\stutterfix")
+
 //command line
 count=parameter_count()
 if (count) {
@@ -30,7 +36,7 @@ TD_start(spr,0,0,30,0,1,1)
 
 draw_set_font(fntSetback)
 
-basetext="Debugger#Helper v0.2"
+basetext="Debugger#Helper v0.4"
 text=basetext
 text2=""
 header="made by renex - greetz to Floogle & Samiboule"

@@ -142,7 +142,7 @@ if (fn!="") {
     if (chr(buffer_read_u8(b))="7") {
         count+=1
         buffer_destroy(b)
-        patch_gm8(fn)
+        patch_gm8(fn,0)
         exit
     }
 
@@ -156,7 +156,7 @@ if (fn!="") {
         if (chr(buffer_read_u8(b))="X") {
             //upx gm8 detected
             buffer_destroy(b)
-            patch_gm8(fn)
+            patch_gm8(fn,0)
             exit
         }
     }
@@ -166,7 +166,7 @@ if (fn!="") {
     if (buffer_read_u32(b)==2000000) {
         //bang. gm 8.0 detected
         buffer_destroy(b)
-        patch_gm8(fn)
+        patch_gm8(fn,1)
         exit
     }
 
@@ -185,7 +185,7 @@ if (fn!="") {
         if (chr(buffer_read_u8(b))="r") {
             //gm8 brute force detection
             buffer_destroy(b)
-            patch_gm8(fn)
+            patch_gm8(fn,1)
             exit
         }
     }
@@ -196,7 +196,7 @@ if (fn!="") {
     if (buffer_read_u32(b)==810) {
         //bingo! there you go specifically k3
         buffer_destroy(b)
-        patch_gm8(fn)
+        patch_gm8(fn,1)
         exit
     }
 
@@ -212,7 +212,7 @@ if (fn!="") {
         if (buffer_read_u8(b)==$00) {
             //gm 8.1 detected
             buffer_destroy(b)
-            patch_gm8(fn)
+            patch_gm8(fn,1)
             exit
         }
 

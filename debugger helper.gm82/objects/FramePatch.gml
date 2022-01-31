@@ -42,6 +42,6 @@ applies_to=self
 draw_sprite(sprite_index,checked,x,y)
 draw_set_font(fntSmall)
 draw_set_valign(1)
-draw_text(x+40,y+16,"Apply Input#Lag Patch")
+draw_text(x+40,y+16,"Vpatch")
 draw_set_valign(0)
 draw_set_font(fntSetback)
