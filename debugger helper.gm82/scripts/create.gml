@@ -36,7 +36,7 @@ TD_start(spr,0,0,30,0,1,1)
 
 draw_set_font(fntSetback)
 
-basetext="Debugger#Helper v0.4"
+basetext="Debugger#Helper v0.41"
 text=basetext
 text2=""
 header="made by renex - greetz to Floogle & Samiboule"

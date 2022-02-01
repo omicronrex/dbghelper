@@ -201,8 +201,8 @@ if (fn!="") {
     }
 
     //gm8.1 brute force check
-    buffer_set_pos(b,2000000)
-    repeat (300000) {
+    buffer_set_pos(b,1900000)
+    repeat (400000) {
         byte=buffer_read_u8(b)
 
         //8.1's 3800000
