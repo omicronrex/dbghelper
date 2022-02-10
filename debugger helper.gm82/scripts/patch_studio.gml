@@ -29,7 +29,7 @@ file_delete(dir+"options.ini")
 
 //patch sleep margin!
 // sami <3
-patch_sleep(exe)
+patch_sleep(dir+"\")
 
 file_delete(exe)
 
