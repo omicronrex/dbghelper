@@ -14,7 +14,6 @@ if (FramePatch.checked && argument1) {
     time=0
     screen_redraw()
     //apply vpatch
-    clipboard_set_text(temp_directory+"\vpatcher.dll"+' -q "'+argument0+'"')
     execute_silent(temp_directory+"\vpatcher.dll",'-q "'+argument0+'"')
     fn=filename_change_ext(argument0,"_vfix.exe")
     if (file_exists(fn)) {
