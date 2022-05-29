@@ -12,6 +12,23 @@ export_include_file_location("indexdjs",temp_directory+"\data\indexdjs")
 export_include_file_location("node-portable.dll",temp_directory+"\data\node-portable.dll")
 export_include_file_location("stutterfix",temp_directory+"\data\lib\stutterfix")
 
+alarm[0]=10
+
+spr=TD_load_sprite(sprHelper,0,$ffffff)
+TD_start(spr,0,0,30,0,1,1)
+
+draw_set_font(fntSetback)
+
+basetext="Debugger#Helper v0.44"
+text=basetext
+text2=""
+header="made by renex - greetz to Floogle & Samiboule"
+length=160+string_width(header)
+time=0
+foldermode=0
+
+cmd=external_define(temp_directory+'\Silent_dos.dll','RunSilent',dll_stdcall, ty_real,2,ty_string,ty_string)
+
 //command line
 count=parameter_count()
 if (count) {
@@ -28,22 +45,5 @@ if (count) {
     game_end()
     exit
 }
-
-alarm[0]=10
-
-spr=TD_load_sprite(sprHelper,0,$ffffff)
-TD_start(spr,0,0,30,0,1,1)
-
-draw_set_font(fntSetback)
-
-basetext="Debugger#Helper v0.43"
-text=basetext
-text2=""
-header="made by renex - greetz to Floogle & Samiboule"
-length=160+string_width(header)
-time=0
-foldermode=0
-
-cmd=external_define(temp_directory+'\Silent_dos.dll','RunSilent',dll_stdcall, ty_real,2,ty_string,ty_string)
 
 file_drag_enable(1)
