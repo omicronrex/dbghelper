@@ -4,6 +4,8 @@ Debugger Helper is an automatic Game Maker Patch Tool for Windows 8/10, made
 by renex using parts provided by Floogle and Samiboule, designed to replace
 the need to manually apply the other patch tools.
 
+- [Download latest version](https://github.com/omicronrex/dbghelper/releases/latest)
+
 ### Currently supported patches:
 
 - GM Studio scheduler resolution fix DBGHELP.dll by renex
