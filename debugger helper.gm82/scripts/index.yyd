@@ -3,9 +3,10 @@ patch
 patch_studio
 sevenzed
 patch_gm8
-execute_silent
+
 create
 show_help
 patch_folder
 recursive_file_find
 patch_sleep
+backup

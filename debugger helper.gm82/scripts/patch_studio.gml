@@ -2,6 +2,8 @@ var exe,path,gamename,dir,f;
 
 exe=argument0
 
+backup(exe)
+
 path=filename_dir(exe)+"\"
 
 gamename=filename_remove_ext(filename_name(exe))

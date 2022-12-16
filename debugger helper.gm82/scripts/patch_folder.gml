@@ -19,7 +19,7 @@ with (Helper) {
     foldermode=1
 
     log=file_text_open_write("log.txt")
-    file_text_write_string(log,"Debugger Helper v0.44 batch patch log")
+    file_text_write_string(log,"Debugger Helper v0.5 batch patch log")
     file_text_writeln(log)
     file_text_write_string(log,date_datetime_string(date_current_datetime()))
     file_text_writeln(log)

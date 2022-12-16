@@ -3,6 +3,11 @@ var fn,b,b2,mem,byte,size,meg;
 if (argument_count) fn=argument[0]
 else fn=get_open_filename("Game Maker game|*.exe",0)
 
+with (Helper) {
+    sound_kind_volume(1,0.15)
+    alarm[1]=2
+}
+
 text="Patching..."
 text2=filename_name(fn)
 time=0

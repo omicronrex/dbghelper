@@ -1,5 +1,3 @@
-window_set_visible(0)
-
 message_background(bgMessage)
 message_button(sprButton)
 message_text_font("Courier New",11,0,1)
@@ -14,12 +12,9 @@ export_include_file_location("stutterfix",temp_directory+"\data\lib\stutterfix")
 
 alarm[0]=10
 
-spr=TD_load_sprite(sprHelper,0,$ffffff)
-TD_start(spr,0,0,30,0,1,1)
-
 draw_set_font(fntSetback)
 
-basetext="Debugger#Helper v0.44"
+basetext="Debugger#Helper v0.5"
 text=basetext
 text2=""
 header="made by renex - greetz to Floogle & Samiboule"
@@ -27,11 +22,10 @@ length=160+string_width(header)
 time=0
 foldermode=0
 
-cmd=external_define(temp_directory+'\Silent_dos.dll','RunSilent',dll_stdcall, ty_real,2,ty_string,ty_string)
-
 //command line
 count=parameter_count()
 if (count) {
+    window_set_visible(0)
     FramePatch.checked=1
     for (i=1;i<=count;i+=1) {
         str=parameter_string(i)

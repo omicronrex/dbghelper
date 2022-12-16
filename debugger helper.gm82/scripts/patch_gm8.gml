@@ -2,11 +2,15 @@
 
 kek=""
 if (!FramePatch.checked) kek="-ni "
-execute_silent(temp_directory+"\gm8x_fix.dll",'-s '+kek+'"'+argument0+'"')
+file_delete(argument0+".bak")
+execute_program_silent(temp_directory+"\gm8x_fix.dll -s "+kek+'"'+argument0+'"')
 if (file_exists(argument0+".bak")) {
-    file_delete(argument0+".bak")
+    if (!Backup.checked) file_delete(argument0+".bak")
     if (!foldermode) show_message("GM8 patch successful!")
-} else if (!foldermode) show_message("GM8 patch failed to apply!##This could mean the game is already patched.")
+} else {
+    backup(argument0)
+    if (!foldermode) show_message("GM8 patch failed to apply!##This could mean the game is already patched.")
+}
 
 if (FramePatch.checked && argument1) {
     text="VPatch..."
@@ -14,7 +18,7 @@ if (FramePatch.checked && argument1) {
     time=0
     screen_redraw()
     //apply vpatch
-    execute_silent(temp_directory+"\vpatcher.dll",'-q "'+argument0+'"')
+    execute_program_silent(temp_directory+"\vpatcher.dll -q "+'"'+argument0+'"')
     fn=filename_change_ext(argument0,"_vfix.exe")
     if (file_exists(fn)) {
         file_delete(argument0)
