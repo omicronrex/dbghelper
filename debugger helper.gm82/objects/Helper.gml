@@ -5,6 +5,13 @@ action_id=603
 applies_to=self
 */
 create()
+message_background(bgMessage)
+message_button(sprButton)
+message_size(400,-1)
+message_caption(0,"")
+message_text_font("Courier New",11,0,1)
+message_button_font("Courier New",11,0,1)
+message_mouse_color(0)
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -12,8 +19,7 @@ action_id=603
 applies_to=self
 */
 sound_kind_volume(1,0.3)
-music=sound_add_included("Cheese n Onion.xm",1,1)
-sound_loop(music)
+sound_loop(global.music)
 #define Alarm_1
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -72,6 +78,7 @@ draw_set_halign(0)
 text=basetext
 text2=""
 with (Que) if (tip) other.text="About"
+with (Change) if (tip) other.text="Change#Skin"
 with (Quit) if (tip) other.text="Quit"
 with (Folder) if (tip) other.text="Patch a#folder"
 with (MusicToggle) if (tip) other.text="Mute"

@@ -1,3 +1,4 @@
+|initialization
 |create
 |patch_folder
 |patch
@@ -8,3 +9,4 @@
 |sevenzed
 |show_help
 |recursive_file_find
+|change_ui

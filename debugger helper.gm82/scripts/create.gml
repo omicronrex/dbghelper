@@ -1,20 +1,8 @@
-message_background(bgMessage)
-message_button(sprButton)
-message_text_font("Courier New",11,0,1)
-message_button_font("Courier New",11,0,1)
-message_mouse_color(0)
-
-directory_create(temp_directory+"\data")
-directory_create(temp_directory+"\data\lib")
-export_include_file_location("indexdjs",temp_directory+"\data\indexdjs")
-export_include_file_location("node-portable.dll",temp_directory+"\data\node-portable.dll")
-export_include_file_location("stutterfix",temp_directory+"\data\lib\stutterfix")
-
 alarm[0]=10
 
 draw_set_font(fntSetback)
 
-basetext="Debugger#Helper v0.5"
+basetext="Debugger#Helper v0.6"
 text=basetext
 text2=""
 header="made by renex - greetz to Floogle & Samiboule"
@@ -39,5 +27,3 @@ if (count) {
     game_end()
     exit
 }
-
-file_drag_enable(1)

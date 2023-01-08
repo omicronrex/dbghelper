@@ -2,7 +2,18 @@
 |Helper
 |Quit
 |Que
+|Change
 |Folder
 |FramePatch
 |Backup
 |MusicToggle
++alt window
+	|AltHand
+	|AltPatch
+	|AltQuit
+	|AltBackup
+	|AltVpatch
+	|AltQue
+	|AltChange
+	|AltMute
+	|AltFolder

@@ -14,7 +14,7 @@ applies_to=self
 */
 checked=!checked
 if (checked) sound_stop_all()
-else sound_loop(Helper.music)
+else sound_loop(global.music)
 #define Mouse_10
 /*"/*'/**//* YYD ACTION
 lib_id=1
